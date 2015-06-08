@@ -1,0 +1,11 @@
+<%= form_for [@sport, @community, @post] do |f| %>
+
+  <%= f.label :title  %>
+  <%= f.text_field :title %>
+
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+
+  <%= f.submit 'Submit' %>
+
+<% end %>

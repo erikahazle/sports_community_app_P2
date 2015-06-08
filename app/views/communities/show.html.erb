@@ -1,0 +1,5 @@
+<% @community.posts.each do |post| %>
+  <%= post.title %>
+<% end %>
+
+<%= link_to 'Add a post', new_sport_community_post_path(@sport, @community) %>

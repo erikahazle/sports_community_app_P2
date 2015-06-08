@@ -1,0 +1,4 @@
+<% @sport.communities.each do |community|  %>
+  <%= community.name %>
+  <%= link_to community.post_code, [@sport, community] %>
+<% end %>
