@@ -1,4 +1,4 @@
 <% @sports.each do |sport| %>
   <%= image_tag(sport.image) %>
-  <%= link_to sport.name, sport_path(sport.id) %>
+  <%= link_to sport.name, sport_path(sport.id), class: 'sport-link-index', data: sport.id %>
 <% end %>

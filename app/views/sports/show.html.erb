@@ -1,4 +1,8 @@
-<% @sport.communities.each do |community|  %>
-  <%= community.name %>
-  <%= link_to community.post_code, [@sport, community] %>
+<h2 data-id=<%=@sport.id%>><%= @sport.name %></h2>  
+
+<div id="map-canvas"></div>
+
+<% @sport.communities.each do |community| %>
+  <p><%= community.name %></p> 
+  <%= link_to community.post_code, sport_community_path(@sport, community) %>
 <% end %>
