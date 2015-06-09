@@ -31,6 +31,14 @@ $(document).ready(function() {
             position: latLng,
             map: map
         });
+        var contentString = '<div>' + data.name + '</div>' +
+        '<a href="/sports/' + data.sport_id + '/communities/' + data.id + '">Join the community</a>'
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
       })
     })
   }
