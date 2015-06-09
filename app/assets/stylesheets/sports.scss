@@ -2,9 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-img {
-  width: 300px;
-  height: 250px;
+.sport-index {
+  width: 28%;
+  display: inline-block;
+  padding: 20px;
+  border: 4px solid rgb(34,83,120);
+  background-image: cover;
+  img {
+    width: 100%;
+    height: 250px;
+  }
+
 }
 
 #map-canvas {
