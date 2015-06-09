@@ -1,5 +1,5 @@
 <% @sports.each do |sport| %>
-  <div class="sport-index" style="background-color: url('http://media1.onsugar.com/files/2012/02/08/4/192/1922729/fcc8879abb5a2ca5_run.xxxlarge_1.jpg')">
+  <div class="sport-index" style="background-image: url('<%= sport.image %>')">
     <h5><%= link_to sport.name, sport_path(sport.id), class: 'sport-link-index', data: sport.id %></h5>   
   </div>
 <% end %>

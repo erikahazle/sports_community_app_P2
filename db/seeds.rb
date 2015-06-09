@@ -13,9 +13,9 @@ Sport.delete_all
 
 
 running = Sport.create(name: 'Running', description: 'Great way to keep fit without a gym membership', image: 'https://download.unsplash.com/photo-1421091242698-34f6ad7fc088', outdoor: true)
-football = Sport.create(name: 'Football', description: 'Great way to keep fit without a gym membership', image: 'https://download.unsplash.com/photo-1421091242698-34f6ad7fc088', outdoor: true)
-yoga = Sport.create(name: 'Yoga', description: 'Great way to keep fit without a gym membership', image: 'https://download.unsplash.com/photo-1421091242698-34f6ad7fc088', outdoor: true)
-
+football = Sport.create(name: 'Football', description: 'Great way to keep fit without a gym membership', image: 'https://snap-photos.s3.amazonaws.com/img-thumbs/960w/A4431D9AB1.jpg', outdoor: true)
+yoga = Sport.create(name: 'Yoga', description: 'Great way to keep fit without a gym membership', image: 'http://cdn0.stocksy.com/a/iSZ000/z0/136320.jpg', outdoor: true)
+cycling = Sport.create(name: 'Cycling', description: 'Tour de any town..', image: 'http://stokpic.com/wp-content/uploads/2014/09/Tor-De-France-Cycling-Competition-In-Paris.jpg', outdoor: true)
 community1 = running.communities.create(name: "Runner's Club", description: "Beginner's club", image: 'https://download.unsplash.com/photo-1421091242698-34f6ad7fc088', post_code: 'E15 1BF')
 community2 = running.communities.create(name: "Runnerzzz", description: "Intermediate club", image: 'https://download.unsplash.com/photo-1421091242698-34f6ad7fc088', post_code: 'EC2M 7QH')
 community3 = running.communities.create(name: "Runner's Club", description: "A beginner's club", image: 'https://download.unsplash.com/photo-1421091242698-34f6ad7fc088', post_code: 'E1 5JL')
