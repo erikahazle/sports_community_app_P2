@@ -1,4 +1,5 @@
-<h2 data-id=<%=@sport.id%>><%= @sport.name %></h2>  
+<h2 data-id=<%=@sport.id%>><%= @sport.name %></h2>
+<%= link_to 'Add a new community', new_sport_community_path(@sport) %> 
 
 <div id="map-canvas"></div>
 
