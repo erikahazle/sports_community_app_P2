@@ -1,9 +1,19 @@
-<h2 data-id=<%=@sport.id%>><%= @sport.name %></h2>
-<%= link_to 'Add a new community', new_sport_community_path(@sport) %> 
+<div class="show-sports-page-info">
+  <h2 data-id=<%=@sport.id%>><%= @sport.name %></h2>
+  <%= link_to 'Add a new community', new_sport_community_path(@sport) %>  
+</div>
 
 <div id="map-canvas"></div>
 
-<% @sport.communities.each do |community| %>
-  <p><%= community.name %></p> 
-  <%= link_to community.post_code, sport_community_path(@sport, community) %>
-<% end %>
+<div class="sport-communities-all">
+  <h3>Communities:</h3>
+  <div class="communities-exist">
+    <% @sport.communities.each do |community| %>
+      <div class="sport-show-communities">
+        <p><%= community.name %></p> 
+        <%= link_to community.post_code, sport_community_path(@sport, community) %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

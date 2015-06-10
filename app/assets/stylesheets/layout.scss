@@ -5,7 +5,7 @@ body {
     height: 80px;
     background-color: rgb(22,149,163);
     line-height: 80px;
-    border-bottom: 4px solid rgb(34,83,120);
+    border-bottom: 5px solid rgb(235,127,0);
     font-family: 'Montserrat', sans-serif;
     li {
       list-style: none;
@@ -34,14 +34,11 @@ body {
         text-decoration: none;
         color: rgb(34,83,120);
       }
+      a:hover {
+        border-bottom: 2px dotted rgb(34,83,120);
+      }
     }
   } 
-}
-
-footer {
-  a:hover {
-    border-bottom: 2px dotted rgb(34,83,120);
-  }
 }
 
 .nav-link {

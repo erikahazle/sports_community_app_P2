@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*********************
+INDEX PAGE
+**********************/
+
+.sports-index-wrapper {
+  text-align: center;
+}
+
 .greeting {
   height: 300px;
   width: 100%;
@@ -28,17 +36,71 @@
     margin: 0;
     padding: 0;
     a {
-      color: rgb(243, 255, 226);
+      color: white;
       text-decoration: none;
       font-family: 'Montserrat', sans-serif;
       font-size: 50px;
     }
   }
-  
 }
+
+.sport-index:hover {
+  opacity: 0.5;
+  a {
+    color: black;
+    font-size: 55px;
+  }
+}
+
+/*********************
+SHOW PAGE
+**********************/
 
 #map-canvas {
   width: 100%;
   height: 450px;
-  border-radius: 15px;
+}
+
+.show-sports-page-info {
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(34,83,120);
+  h2 {
+    margin-left: 23px;
+    display: inline-block;
+    padding: 10px;
+  }
+  a {
+    display: inline-block;
+    color: rgb(34,83,120);
+    text-decoration: none;
+    padding: 10px;
+  }
+  a:hover {
+    color: rgb(235,127,0);
+    border-bottom: 2px dotted rgb(235,127,0);
+  }
+}
+
+h3 {
+  margin-left: 35px;
+}
+
+.sport-communities-all {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(34,83,120);
+  .sport-show-communities {
+    margin-left: 35px;
+    padding-bottom: 20px;
+    display: inline-block;
+    width: 10%;
+    a {
+      text-decoration: none;
+      border-bottom: 2px dotted rgb(235,127,0);
+      color: rgb(235,127,0);
+    }
+    a:hover {
+      border-bottom: 2px solid rgb(235,127,0);
+    }
+  }
 }
