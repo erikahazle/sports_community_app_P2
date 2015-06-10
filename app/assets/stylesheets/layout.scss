@@ -62,3 +62,69 @@ body {
   width: 100%;
   text-align: center;
 }
+
+/*************************
+FORMS
+**************************/
+
+form {
+  text-align: center;
+  label {
+    margin-top: 20px;
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(34,83,120);
+  }
+  input {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(172,240,242);
+    border: 2px solid rgb(34,83,120);
+    margin-bottom: 20px;
+    width: 300px;
+  }
+  input[type='Submit'] {
+    width: 100px;
+    border-radius: 20px;
+    border: 4px solid rgb(235,127,0);
+    background-color: rgb(34,83,120);
+    color: rgb(243, 255, 226);
+  }
+  #community_description {
+    @extend input;
+    height: 200px;
+  }
+  #comment_content {
+    @extend input;
+    height: 150px;
+  }
+  #post_title {
+    width: 60%;
+  }
+  #post_content {
+    @extend input;
+    @extend #post_title;
+    height: 500px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

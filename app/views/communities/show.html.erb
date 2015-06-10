@@ -1,7 +1,15 @@
-<% @community.posts.each do |post| %>
-  <%= post.title %>
-  <%= link_to 'Comment', new_sport_community_post_comment_path(@sport, @community, post) %>
-<% end %>
+<div class="community-show-heading">
+  <h2 id="community-show-name"><%= @community.name %></h2>
+  <%= link_to 'Add a post', new_sport_community_post_path(@sport, @community) %> 
+</div>
 
-<%= link_to 'Add a post', new_sport_community_post_path(@sport, @community) %>
+<div class="community-show-content">
+  <% @community.posts.each do |post| %>
+    <div class="community-post-item">
+      <h3><%= post.title %></h3> 
+      <%= link_to 'Comment', new_sport_community_post_comment_path(@sport, @community, post) %>
+    </div>
+  <% end %> 
+</div>
+
 

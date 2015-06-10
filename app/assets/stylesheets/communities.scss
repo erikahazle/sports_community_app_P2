@@ -1,3 +1,35 @@
 // Place all the styles related to the Communities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.community-show-heading {
+  width: 20%;
+  display: inline-block;
+  vertical-align: top;
+  #community-show-name {
+    margin-left: 35px;
+    display: block;
+  } 
+  a {
+    margin-left: 35px;
+    display: block;
+    text-decoration: none;
+    color: rgb(235,127,0);
+  } 
+}
+
+.community-show-content {
+  width: 75%;
+  display: inline-block;
+  .community-post-item {
+    margin-bottom: 40px;
+    a {
+      margin-left: 35px;
+      text-decoration: none;
+      color: rgb(235,127,0);
+    }
+    a:hover {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+    }
+  }
+}
