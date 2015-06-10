@@ -11,7 +11,8 @@
 <body>
   <header>
     <nav>
-      <li><%= link_to 'HOME', root_path, class: 'nav-link' %></li>
+      <li id='brand-logo'><%= link_to 'SPORTIFY', root_path %></li>
+      <li class="nav-link"><%= link_to 'HOME', root_path %></li>
     </nav>
   </header>
 
@@ -19,6 +20,11 @@
   <%= yield %>
 </div>
 
+<footer>
+  <li><%= link_to 'SPORTS', sports_path %></li>
+  <li><%= link_to 'ABOUT', about_path %></li>
+  <li><%= link_to 'CONTACT', contact_path %></li>
+</footer>
 
 </body>
 </html>

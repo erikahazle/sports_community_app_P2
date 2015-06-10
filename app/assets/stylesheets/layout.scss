@@ -16,7 +16,49 @@ body {
         color: white;
       }
     }
-  }  
+  }
+  footer {
+    clear: both;
+    height: 80px;
+    background-color: rgb(235,127,0);
+    line-height: 80px;
+    border-bottom: 4px solid rgb(34,83,120);
+    font-family: 'Montserrat', sans-serif;
+    border-top: 4px solid rgb(34,83,120);
+    text-align: center;
+    li {
+      list-style: none;
+      display: inline-block;
+      margin-left: 30px;
+      a {
+        text-decoration: none;
+        color: rgb(34,83,120);
+      }
+    }
+  } 
+}
+
+footer {
+  a:hover {
+    border-bottom: 2px dotted rgb(34,83,120);
+  }
+}
+
+.nav-link {
+  float: right;
+  margin-right: 50px;
+}
+
+.nav-link:hover {
+  font-size: 20px;
+  a {
+    color: rgb(235,127,0);
+  }
+}
+
+#brand-logo {
+  font-size: 40px;
+  color: rgb(243, 255, 226);
 }
 
 .contents {

@@ -3,7 +3,6 @@
 
 <p><%= @post.content %></p>
 
-
 <% @post.comments.each do |comment| %>
   <h6><%= comment.user_name %></h6>
   <p><%= comment.content %></p>
