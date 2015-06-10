@@ -13,7 +13,8 @@ describe 'user can comment' do
     click_link 'Running'
     click_link 'E15'
     click_link 'Comment'
-    fill_in('Comment', :with => 'You go girl')
+    fill_in('User name', :with => 'Runner')
+    fill_in('Content', :with => 'You go girl')
     click_button('Submit')
     expect(page).to have_content 'You go girl'
   end

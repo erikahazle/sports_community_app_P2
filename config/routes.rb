@@ -29,7 +29,9 @@ Rails.application.routes.draw do
   #   resources :products
   resources :sports do
     resources :communities do
-      resources :posts
+      resources :posts do
+        resources :comments
+      end
     end
   end
   # Example resource route with options:

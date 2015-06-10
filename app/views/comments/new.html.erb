@@ -1,0 +1,13 @@
+<h2><%= @post.title %></h2>
+<p><%= @post.content %></p>
+
+<%= form_for [@sport, @community, @post, @comment] do |f| %>
+  <%= f.label :user_name  %>
+  <%= f.text_field :user_name %>
+
+  <%= f.label :content  %>
+  <%= f.text_field :content %>
+
+  <%= f.submit 'Submit' %>
+
+<% end %>

@@ -16,4 +16,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+    @sport = Sport.find(params[:sport_id])
+    @community = Community.find(params[:community_id])
+    @post = Post.find(params[:id])
+  end
+
 end

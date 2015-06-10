@@ -1,5 +1,6 @@
 <% @community.posts.each do |post| %>
   <%= post.title %>
+  <%= link_to 'Comment', new_sport_community_post_comment_path(@sport, @community, post) %>
 <% end %>
 
 <%= link_to 'Add a post', new_sport_community_post_path(@sport, @community) %>
