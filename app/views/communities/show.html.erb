@@ -1,5 +1,7 @@
 <div class="community-show-heading">
+  <h1><%= link_to @community.sport.name, sport_path(@community.sport), class: 'sport-name' %></h1>
   <h2 id="community-show-name"><%= @community.name %></h2>
+  <img src="<%= @community.image %>">
   <%= link_to 'Add a post', new_sport_community_post_path(@sport, @community) %> 
 </div>
 
@@ -8,7 +10,10 @@
     <div class="community-post-item">
       <h3><%= post.title %></h3> 
       <h5>by <%= post.user_name %></h5>
-      <p><%= post.content %></p>
+      <div class="post-content">
+        <p><%= post.content %></p>
+      </div>
+      <p>...</p>
       <%= link_to 'Read More', sport_community_post_path(@sport, @community, post) %>
     </div>
   <% end %> 
