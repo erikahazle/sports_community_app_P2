@@ -7,9 +7,9 @@
   <% @community.posts.each do |post| %>
     <div class="community-post-item">
       <h3><%= post.title %></h3> 
-      <%= link_to 'Comment', new_sport_community_post_comment_path(@sport, @community, post) %>
+      <h5>by <%= post.user_name %></h5>
+      <p><%= post.content %></p>
+      <%= link_to 'Read More', sport_community_post_path(@sport, @community, post) %>
     </div>
   <% end %> 
 </div>
-
-

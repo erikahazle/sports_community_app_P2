@@ -3,4 +3,5 @@ class Post < ActiveRecord::Base
   has_many :comments
   validates :title, presence: true
   validates :content, presence: true
+  validates :user_name, presence: true
 end

@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   def create
     sport = Sport.find(params[:sport_id])
     community = Community.find(params[:community_id])
-    post = community.posts.new params[:post].permit(:title, :content)
+    post = community.posts.new params[:post].permit(:user_name, :title, :content)
     if post.save
       redirect_to [sport, community]
     else
@@ -20,6 +20,7 @@ class PostsController < ApplicationController
     @sport = Sport.find(params[:sport_id])
     @community = Community.find(params[:community_id])
     @post = Post.find(params[:id])
+    @comment = Comment.new
   end
 
 end

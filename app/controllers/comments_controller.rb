@@ -1,4 +1,7 @@
 class CommentsController < ApplicationController
+  def index
+  end
+
   def new
     @sport = Sport.find(params[:sport_id])
     @community = Community.find(params[:community_id])

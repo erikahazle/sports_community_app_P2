@@ -17,3 +17,17 @@
   </div>
 </div>
 
+<div class="sport-posts">
+  <h3>Latest Posts about <%= @sport.name %>:</h3>
+  <div class="sport-latest-post">
+    <% @latest_posts.each do |post| %>
+      <div class="sport-single-post">
+        <h4><%= post.community.name %>, <%= post.community.post_code %></h4>
+        <p>has a new post:</p>
+        <h3><%= post.title %></h3>
+        <%= link_to 'Read More', sport_community_post_path(@sport, post.community_id, post) %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

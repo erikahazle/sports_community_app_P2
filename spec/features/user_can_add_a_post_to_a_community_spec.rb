@@ -12,6 +12,7 @@ describe 'User can post to a community' do
     click_link 'Running'
     click_link 'E15'
     click_link 'Add a post'
+    fill_in('User name', :with => 'Happy Runner')
     fill_in('Title', :with => 'Getting started with running')
     fill_in('Content', :with => 'Running is a great way to get fit quickly')
     click_button('Submit')

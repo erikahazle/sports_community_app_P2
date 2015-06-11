@@ -1,5 +1,8 @@
 <%= form_for [@sport, @community, @post] do |f| %>
 
+  <%= f.label :user_name  %>
+  <%= f.text_field :user_name %>
+
   <%= f.label :title  %>
   <%= f.text_field :title %>
 

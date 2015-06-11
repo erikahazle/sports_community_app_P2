@@ -6,6 +6,7 @@ class SportsController < ApplicationController
   def show
     @sport = Sport.find(params[:id])
     @communities = @sport.communities
+    @latest_posts = @sport.posts.last(3)
     respond_to do |format|
       format.html
       format.json { render json: @communities }

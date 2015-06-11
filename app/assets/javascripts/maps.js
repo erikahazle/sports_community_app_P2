@@ -11,10 +11,10 @@ function initialize() {
     center: myLatlng
   }
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  callAjaxStuff(map);
+  addMarkersToMap(map);
 }
 
-function callAjaxStuff(map){
+function addMarkersToMap(map){
   sport_id = $('h2').attr('data-id');
     // console.log("sport_id is: " + sport_id);
     $.ajax({
@@ -31,8 +31,9 @@ function callAjaxStuff(map){
             map: map
         });
         console.log(latLng);
-        var contentString = '<div>' + data.name + '</div>' +
-        '<a href="/sports/' + data.sport_id + '/communities/' + data.id + '">Join the community</a>'
+        var contentString = '<div class="infowindow-content"><h3>' + data.name + '</h3>' +
+        '<div class="google-info-content"><p>' + data.description + '</p></div>' +
+        '<a href="/sports/' + data.sport_id + '/communities/' + data.id + '">Join the community</a></div>'
         var infowindow = new google.maps.InfoWindow({
           content: contentString
         });

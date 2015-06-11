@@ -7,3 +7,13 @@
   <h6><%= comment.user_name %></h6>
   <p><%= comment.content %></p>
 <% end %>
+
+<%= form_for [@sport, @community, @post, @comment] do |f| %>
+  <%= f.label :user_name  %>
+  <%= f.text_field :user_name %>
+
+  <%= f.label :content  %>
+  <%= f.text_area :content %>
+
+  <%= f.submit 'Submit' %>
+<% end %>

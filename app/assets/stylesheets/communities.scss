@@ -18,12 +18,19 @@
 }
 
 .community-show-content {
-  width: 75%;
+  border-left: 2px solid blue;
+  width: 70%;
   display: inline-block;
+  margin: 30px;
   .community-post-item {
+    margin-left: 35px;
+    border: 2px solid blue;
+    padding: 20px;
+    h3 {
+      margin: 0;
+    }
     margin-bottom: 40px;
     a {
-      margin-left: 35px;
       text-decoration: none;
       color: rgb(235,127,0);
     }
