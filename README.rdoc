@@ -1,28 +1,33 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+SPORTIFY
 
-Things you may want to cover:
+It’s an app that allows users to be part of their local sports community and get sports and fitness advice from other users who live nearby.
 
-* Ruby version
+Technology used:
 
-* System dependencies
+Ruby on Rails
+Postgresql
+Sass
+AJAX
+Geocoder
+Google Maps API
+Rspec, Capybara (TDD)
 
-* Configuration
+Installation instructions:
 
-* Database creation
+click 'fork' (https://help.github.com/articles/fork-a-repo/)
 
-* Database initialization
+run bundle and then rake db:migrate in your terminal
 
-* How to run the test suite
+Trello boards:
+https://trello.com/b/Gf0A8TXo/ga-wdi-project-2
 
-* Services (job queues, cache servers, search engines, etc.)
+Link to your wireframes – sketches of major views / interfaces in your application
+Link to some entity relationship diagrams – model out your data relationships before coding
 
-* Deployment instructions
+Descriptions of any unsolved problems or major hurdles overcome
 
-* ...
+This was a really exciting project for me as I got to utilise various technologies I have learnt over the last 6 weeks. The most challenging aspect of it was integrating Google Maps and getting it to use data from the database to create markers on the page. 
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+If I would have a little more time, I would have tried to create a User model to allow users to contribute to the website (create new as well edit and delete any resources that they may have created) only when they have logged in. I would have also included "uk_postcode" to validate whether postcodes that users are entering are correct as well handle form error messages (as well as other many many things...)

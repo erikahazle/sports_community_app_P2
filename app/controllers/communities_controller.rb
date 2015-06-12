@@ -12,11 +12,12 @@ class CommunitiesController < ApplicationController
   def create
     sport = Sport.find(params[:sport_id])
     community = sport.communities.new params[:community].permit(:name, :description, :post_code, :image)
-    if community.save
-      redirect_to sport_path(sport)
-    else
-      render 'new'
+      begin
+        community.save
+      rescue ActiveRecord::RecordInvalid => e
+        flash[:error] = e.record.errors.full_messages.to_sentence
+        render :action => "new"
+      end
     end
-  end
-
+    
 end
