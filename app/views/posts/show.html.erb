@@ -1,13 +1,14 @@
 <div class="post-show-wrapper">
   <div class="post-show-heading">
     <h1><%= link_to @sport.name, sport_path(@sport), class: 'sport-name' %></h1>
-    <h2 id="community-show-name"><%= @community.name %></h2>
+    <h2 id="community-show-name"><%= link_to @community.name, sport_community_path(@sport, @community) %></h2>
     <img src="<%= @community.image %>">
   </div>
   <div class="post-show-content">
     <h1><%= @post.title %></h1>
     <h4>by <%= @post.user_name %></h4>
     <p><%= @post.content %></p>
+
     <h3>Comments</h3>
     <div class="comment-form">
       <%= form_for [@sport, @community, @post, @comment] do |f| %>
@@ -20,11 +21,10 @@
         <%= f.submit 'Submit' %>
       <% end %>  
     </div>  
-
-    <% @post.comments.each do |comment| %>
+    <% @post.comments.reverse.each do |comment| %>
       <div class="comment">
         <h3><%= comment.user_name %></h3>
-        <p><%= time_ago_in_words(comment.created_at) %> ago</p>
+        <p class="time-ago"><%= time_ago_in_words(comment.created_at) %> ago</p>
       </div>
       <div class="comment-content">
         <p><%= comment.content %></p>

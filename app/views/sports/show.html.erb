@@ -24,7 +24,7 @@
       <div class="sport-single-post">
         <h4><%= post.community.name %>, <%= post.community.post_code %></h4>
         <p>has a new post:</p>
-        <h3><%= post.title %></h3>
+        <h3><%= post.title.length < 32 ? post.title : post.title.slice(0..30) + '...' %></h3>
         <%= link_to 'Read More', sport_community_post_path(@sport, post.community_id, post) %>
       </div>
     <% end %>

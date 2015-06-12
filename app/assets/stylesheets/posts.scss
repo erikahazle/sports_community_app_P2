@@ -12,6 +12,19 @@
       margin-left: 35px;
       margin-bottom: 20px;
     }
+    h1 {
+      a {
+        width: 135px;
+      }
+    }
+    h2 {
+      @extend h1;
+      a {
+        width: 170px;
+        margin-left: 0;
+        color: rgb(34,83,120);
+      }
+    }
   }
   .post-show-content {
     width: 70%;
@@ -36,9 +49,6 @@
     text-decoration: none;
     color: rgb(235,127,0);
     font-family: 'Montserrat', sans-serif;
-  }
-  a:hover {
-    border-bottom: 2px dotted rgb(235,127,0);
   }
   .comment-form {
     input {
